@@ -1,0 +1,168 @@
+---
+import astroLogo from '../assets/astro.svg';
+import background from '../assets/background.svg';
+---
+
+<div id="container">
+  <img id="background" src={background.src} alt="background" fetchpriority="high" />
+  <main>
+    <img id="logo" src={astroLogo.src} alt="Astro Logo" width="115" height="48" />
+    <h1 id="greeting">Hello, Stellar!</h1>
+    <form id="name-form" autocomplete="off">
+      <input id="name-input" type="text" placeholder="Enter your name..." required />
+      <button class="button" type="submit">Invoke Hello World Contract</button>
+    </form>
+    <p class="subtitle">Welcome to your Stellar-powered app!</p>
+    <div class="links">
+      <a class="button" href="https://docs.astro.build" target="_blank">Astro Docs</a>
+      <a class="button secondary" href="https://soroban.stellar.org/docs" target="_blank">Soroban Docs</a>
+    </div>
+  </main>
+</div>
+
+<script type="module">
+import * as Client from '../packages/hello_world';
+
+const contract = new Client.Client({
+  ...Client.networks.testnet,
+  rpcUrl: 'https://soroban-testnet.stellar.org:443'
+});
+
+const form = document.getElementById('name-form');
+const input = document.getElementById('name-input');
+const greetingEl = document.getElementById('greeting');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const name = input.value.trim();
+  if (!name) return;
+  greetingEl.textContent = 'Loading...';
+  try {
+    const { result } = await contract.hello({ to: name });
+    greetingEl.textContent = result.join(' ');
+  } catch (err) {
+    greetingEl.textContent = 'Error: ' + (err?.message || 'Could not fetch greeting');
+  }
+});
+</script>
+
+<style>
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  filter: blur(100px) brightness(1.1);
+  opacity: 0.7;
+}
+
+#container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter, Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: transparent;
+}
+
+main {
+  background: rgba(255,255,255,0.85);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(44, 0, 80, 0.12);
+  padding: 48px 32px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 90vw;
+}
+
+#logo {
+  margin-bottom: 12px;
+}
+
+h1#greeting {
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, #3245ff 0%, #bc52ee 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin: 0 0 8px 0;
+  text-align: center;
+  min-height: 2.5rem;
+}
+
+form#name-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  width: 100%;
+  justify-content: center;
+}
+
+#name-input {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  outline: none;
+  min-width: 180px;
+  transition: border 0.2s;
+}
+#name-input:focus {
+  border: 1.5px solid #bc52ee;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #4b5563;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.links {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #3245ff 0%, #bc52ee 100%);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(44, 0, 80, 0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+  border: none;
+  cursor: pointer;
+}
+.button:hover {
+  background: linear-gradient(90deg, #bc52ee 0%, #3245ff 100%);
+  box-shadow: 0 4px 16px rgba(44, 0, 80, 0.16);
+}
+.button.secondary {
+  background: linear-gradient(90deg, #d83333 0%, #f041ff 100%);
+}
+.button.secondary:hover {
+  background: linear-gradient(90deg, #f041ff 0%, #d83333 100%);
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 24px 8px 16px 8px;
+  }
+  h1#greeting {
+    font-size: 1.5rem;
+  }
+  #name-input {
+    min-width: 100px;
+  }
+}
+</style>
