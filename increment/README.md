@@ -43,7 +43,7 @@ This will compile the contract to WASM and place the output in `target/wasm32v1-
 ### Using Soroban CLI
 ```sh
 cd contracts/increment
-soroban contract build
+stellar contract build
 ```
 
 ---
@@ -107,16 +107,16 @@ You can deploy and interact with the contract using the Soroban CLI. Here's a ba
 
 1. **Build the contract:**
    ```sh
-   soroban contract build
+   stellar contract build
    ```
 2. **Deploy the contract:**
    ```sh
-   soroban contract deploy --wasm target/wasm32v1-none/release/increment.wasm
+   stellar contract deploy --wasm target/wasm32v1-none/release/increment.wasm
    ```
    Note the contract ID returned.
 3. **Invoke the increment function:**
    ```sh
-   soroban contract invoke \
+   stellar contract invoke \
      --id <contract-id> \
      --fn increment
    ```
@@ -148,4 +148,5 @@ You can deploy and interact with the contract using the Soroban CLI. Here's a ba
 ---
 
 ## License
+
 This project is for educational purposes and does not include a specific license. Please add one if you intend to use it in production or share it publicly.
