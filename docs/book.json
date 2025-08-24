@@ -1,0 +1,31 @@
+{
+    "title": "Stellar Development Guide",
+    "description": "Complete beginner's guide to building on Stellar and Soroban",
+    "author": "Stellar Development Community",
+    "language": "en",
+    "structure": {
+        "readme": "README.md",
+        "summary": "SUMMARY.md"
+    },
+    "plugins": [
+        "expandable-chapters",
+        "copy-code-button",
+        "search",
+        "github",
+        "theme-default"
+    ],
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/stellar/stellar-notes"
+        },
+        "theme-default": {
+            "showLevel": true
+        }
+    },
+    "variables": {
+        "stellar_docs": "https://developers.stellar.org",
+        "soroban_docs": "https://soroban.stellar.org/docs",
+        "discord": "https://discord.gg/stellar",
+        "github": "https://github.com/stellar"
+    }
+}
