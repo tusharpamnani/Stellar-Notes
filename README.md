@@ -12,10 +12,10 @@ This workspace contains both **working examples** and **comprehensive documentat
 - **`frontend_hello_world/`** - Web frontend integration
 
 ### **Complete Documentation**
-- **`docs/`** - GitBook-style documentation site
+<!-- - **`docs/`** - GitBook-style documentation site -->
 - **`00. Setup.md`** - Quick setup guide
 
-## 📚 Documentation Structure
+<!-- ## 📚 Documentation Structure
 
 The `docs/` folder contains a complete GitBook-style documentation site:
 
@@ -31,12 +31,12 @@ docs/
 ├── advanced/                   # Advanced topics
 ├── reference/                  # Command references
 └── resources/                  # Links and community
-```
+``` -->
 
 ## 🚀 Quick Start
 
 ### **1. Read the Documentation**
-Start with the [documentation](docs/README.md) to understand concepts and get your environment set up.
+Start with the [documentation](https://docs.stellar.org) to understand concepts and get your environment set up.
 
 ### **2. Follow the Examples**
 Work through the examples in order:
@@ -47,7 +47,7 @@ Work through the examples in order:
 ### **3. Build Your Own Projects**
 Use the examples as templates for your own applications.
 
-## 📖 How to Use This Documentation
+<!-- ## 📖 How to Use This Documentation
 
 ### **Option 1: Read Online**
 The documentation is designed to be read in any markdown viewer or editor.
@@ -103,16 +103,16 @@ Before diving in, make sure you have:
 - DeFi protocols
 - NFT marketplaces
 - Gaming platforms
-- Supply chain systems
+- Supply chain systems -->
 
-## 🔗 Key Resources
+<!-- ## 🔗 Key Resources
 
 - **[Documentation](docs/README.md)** - Start here!
-- **[Stellar Developers](https://developers.stellar.org/)** - Official docs
+- **[Stellar Developers](https://docs.stellar.org/)** - Official docs
 - **[Soroban Docs](https://soroban.stellar.org/docs)** - Smart contract platform
-- **[Stellar Discord](https://discord.gg/stellar)** - Community support
+- **[Stellar Discord](https://discord.gg/stellar)** - Community support -->
 
-## 🎯 Learning Path
+<!-- ## 🎯 Learning Path
 
 ### **Phase 1: Foundation (1-2 weeks)**
 1. Read [What is Stellar?](docs/getting-started/what-is-stellar.md)
@@ -132,7 +132,7 @@ Before diving in, make sure you have:
 ### **Phase 4: Advanced Topics (ongoing)**
 1. Explore [Security Best Practices](docs/advanced/security-best-practices.md)
 2. Learn [Optimization Techniques](docs/advanced/contract-optimization.md)
-3. Build [Production Applications](docs/reference/network-config.md)
+3. Build [Production Applications](docs/reference/network-config.md) -->
 
 ## 🚨 Getting Help
 
@@ -143,7 +143,7 @@ Before diving in, make sure you have:
 4. **File an issue** - Report bugs or request features
 
 ### **Community Support**
-- **Discord**: [Stellar Discord](https://discord.gg/stellar)
+- **Discord**: [Stellar Discord](https://discord.com/invite/zVYdY3ktTn)
 - **GitHub**: [Stellar GitHub](https://github.com/stellar)
 - **Forums**: [Stellar Community](https://community.stellar.org/)
 
@@ -156,9 +156,9 @@ This documentation is designed to help the entire Stellar community. You can con
 - **Reporting issues** - Help identify problems
 - **Suggesting improvements** - Share ideas for better organization
 
-## 📝 License
+<!-- ## 📝 License
 
-This documentation is provided as-is for educational purposes. The examples and code are free to use and modify.
+This documentation is provided as-is for educational purposes. The examples and code are free to use and modify. -->
 
 ## 🌟 Why Stellar?
 
@@ -172,10 +172,10 @@ Stellar is an open-source, decentralized network that enables fast, cross-border
 
 ## 🎉 Ready to Start?
 
-Begin your Stellar development journey with the [documentation](docs/README.md)!
+Begin your Stellar development journey with the [documentation](https://docs.stellar.org)!
 
 **Happy coding! 🌟**
 
 ---
 
-*This documentation is maintained by the Stellar development community. For the latest updates, check the [official Stellar documentation](https://developers.stellar.org/) and [community resources](https://discord.gg/stellar).*
+*This documentation is maintained by the Stellar India community. For the latest updates, check the [official Stellar documentation](https://developers.stellar.org/) and [community resources](https://discord.com/invite/zVYdY3ktTn).*
